@@ -3,6 +3,10 @@
 const express = require('express');
 const app = express();
 
+// Global environment variables
+require(`dotenv`).config()
+app.listen()
+
 
 // Greetings
 app.get('/greetings', (req, res) => {
@@ -112,4 +116,5 @@ app.get(`/shoes`, (req, res) => {
 //Listen
 app.listen(3001, () => {
     console.log('Listening on port 3001');
+    console.log(`the secret is ${process.env.SECRET_PASSWORD}`);// for global variable
 });
